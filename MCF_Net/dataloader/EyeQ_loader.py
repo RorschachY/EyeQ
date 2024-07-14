@@ -18,7 +18,7 @@ def load_eyeQ_excel(data_dir, list_file, n_class=3):
 
     for idx in range(img_num):
         image_name = df_tmp["image"][idx]
-        image_names.append(os.path.join(data_dir, image_name[:-5] + '.png'))
+        image_names.append(os.path.join(data_dir, image_name[:-4] + '.png'))
 
         label = lb.transform([int(df_tmp["quality"][idx])])
         labels.append(label)
